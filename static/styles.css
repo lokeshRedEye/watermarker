@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1f1f1f; /* Dark background */
+    color: #ccc; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #333; /* Darker background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #61dafb; /* Accent color */
+}
+
+main {
+    text-align: center;
+}
+
+.upload-container {
+    border: 2px dashed #888; /* Lighter border */
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.upload-container.dragover {
+    border-color: #4CAF50; /* Green border color when dragging over */
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-label p {
+    margin: 0;
+    font-size: 16px;
+    color: #ccc; /* Light text color */
+}
+
+#imageInput {
+    display: none;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-input-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-input-container input[type="text"] {
+    width: calc(100% - 40px); /* Adjusted width */
+    padding: 15px; /* Increased padding */
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background-color: #444; /* Darker input background */
+    color: #ccc; /* Light text color */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 0 0 transparent; /* Initial box shadow */
+}
+
+.text-input-container input[type="text"]:focus {
+    outline: none;
+    background-color: #555; /* Darker background on focus */
+    transform: scale(1.02); /* Slightly scale on focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Light shadow on focus */
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px; /* Increased padding */
+    background-color: #61dafb; /* Accent color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 0 0 transparent; /* Initial box shadow */
+}
+
+button:hover {
+    background-color: #0a84ff; /* Darker hover color */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+#preview-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+#additionalInputs {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#additionalInputs input[type="text"] {
+    width: calc(100% - 40px); /* Adjusted width */
+    padding: 15px; /* Increased padding */
+    margin-right: 10px;
+    border: none;
+    background-color: #444; /* Darker input background */
+    color: #ccc; /* Light text color */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem; /* Larger font size */
+}
+
+#addTextBtn {
+    padding: 15px 30px; /* Increased padding */
+    background-color: #61dafb; /* Accent color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 0 0 transparent; /* Initial box shadow */
+}
+
+#addTextBtn:hover {
+    background-color: #0a84ff; /* Darker hover color */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
