@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, send_file
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 import io
 
 app = Flask(__name__)
@@ -26,13 +26,15 @@ def home():
             image = Image.open(file)
             draw = ImageDraw.Draw(image)
 
-            # Load a system font and define the text position
-            font_size = 100
-            font = ImageFont.truetype("arial", font_size)
+            # Define the text position and color
             text_position = (50, 50)
+            text_color = "white"
 
-            # Draw the text on the image
-            draw.text(text_position, text, font=font, fill="white")
+            # Set the font size to 150 pixels (default font)
+            font_size = 100
+
+            # Draw the text on the image with the specified font size
+            draw.text(text_position, text, fill=text_color, font=None, font_size=font_size)
 
             # Save the image to a bytes object
             img_io = io.BytesIO()
