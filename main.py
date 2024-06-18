@@ -31,7 +31,7 @@ def home():
             text_color = "white"
 
             # Set the font size to 150 pixels (default font)
-            font_size = 100
+            font_size = 500
 
             # Draw the text on the image with the specified font size
             draw.text(text_position, text, fill=text_color, font=None, font_size=font_size)
